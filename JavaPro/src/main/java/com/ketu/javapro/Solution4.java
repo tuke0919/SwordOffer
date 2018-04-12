@@ -1,20 +1,32 @@
 package com.ketu.javapro;
 
-/**
- * <p/>
- * 功能 :
- * <p/>
- * <p>
- * <p>Copyright sohu.com 2017 All right reserved</p>
- *
- * @author ketu 时间 2018/4/12
- * @version 2.0
- *          <p>
- *          最后修改人 无
- * @email ketu@sohu-inc.com
- */
+
+/*
+*
+* 青蛙跳台阶
+*一只青蛙一次可以跳上1级台阶，也可以跳上2级。求该青蛙跳上一个n级的台阶总共有多少种跳法。
+*
+* */
+
 
 public class Solution4 {
+
+
+    public int JumpFloor (int target) {
+        if (target <= 0 ){
+            return 0;
+        }
+
+        if (target == 1){
+            return 1;
+        }
+        if (target == 2) {
+            return 2;
+        }
+
+        return JumpFloor( target -1 ) + JumpFloor( target - 2);
+
+    }
 
 
 
